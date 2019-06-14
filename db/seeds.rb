@@ -21,6 +21,17 @@ end
 
 # Let's do this ...
 
+
+## USERS
+
+User.create! ({
+  first_name: '111',
+  last_name: '111',
+  email: '111@example.com',
+  password_digest: "123"
+})
+
+
 ## CATEGORIES
 
 puts "Finding or Creating Categories ..."
@@ -138,28 +149,28 @@ puts "Here are the reviews..."
 
 Review.create! ({
   product_id: 11,
-  user_id: 2,
+  user_id: 1,
   description: 'This is my favorite chair!!!!',
   rating: 5
 })
 
 Review.create! ({
   product_id: 11,
-  user_id: 2,
+  user_id: 1,
   description: 'This is my favorite chair!!!!',
   rating: 3
 })
 
 Review.create! ({
   product_id: 5,
-  user_id: 4,
+  user_id: 1,
   description: 'By far the worst product I have ever purchased',
   rating: 1
 })
 
 Review.create! ({
   product_id: 3,
-  user_id: 10,
+  user_id: 1,
   description: 'lovely',
   rating: 3
 })
@@ -173,9 +184,10 @@ Review.create! ({
 
 Review.create! ({
   product_id: 12,
-  user_id: 5,
+  user_id: 1,
   description: 'SOLD OUT?????',
   rating: 4
 })
+
 
 puts "DONE!"
