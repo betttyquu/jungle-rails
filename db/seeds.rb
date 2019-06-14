@@ -136,11 +136,39 @@ cat3.products.create!({
 
 puts "Here are the reviews..."
 
-reviews.create! ({
-  product_id:
-  user_id:
-  description:
-  rating: 
+Review.create! ({
+  product_id: 11,
+  user_id: 2,
+  description: 'This is my favorite chair!!!!',
+  rating: 5
+})
+
+Review.create! ({
+  product_id: 5,
+  user_id: 4,
+  description: 'By far the worst product I have ever purchased',
+  rating: 1
+})
+
+Review.create! ({
+  product_id: 3,
+  user_id: 10,
+  description: 'lovely',
+  rating: 3
+})
+
+Review.create! ({
+  product_id: 3,
+  user_id: 1,
+  description: 'Broke very easily...',
+  rating: 2
+})
+
+Review.create! ({
+  product_id: 12,
+  user_id: 5,
+  description: 'SOLD OUT?????',
+  rating: 4
 })
 
 puts "DONE!"
