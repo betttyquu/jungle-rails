@@ -30,7 +30,13 @@
             <dd><%= review.description %> </dd>
             <dd>&nbsp;</dd>
             <% end %>
-        
+
+            <%= form_for :review, url: product_reviews_path(@product) do |f| %>
+              <h2>New review</h2>
+              <%= f.text_field :description %><br>
+              <%= f.select :rating, [1,2,3,4,5] %>
+              <%= f.submit("Create Review") %><br>
+             <% end %>
         </dl>
       </div>
     </div>
