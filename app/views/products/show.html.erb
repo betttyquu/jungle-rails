@@ -28,7 +28,7 @@
           <% @reviews.each do |review|%>
             <dd><%= review.rating %> </dd>
             <dd><%= review.description %> </dd>
-            <% if @current_user.id == review.user_id %>
+            <% if @current_user == review.user_id %>
             <%= button_to 'Delete ', product_review_url(@product, review), method: :delete %>
             <% end %>
             <dd>&nbsp;</dd>
