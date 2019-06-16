@@ -28,8 +28,11 @@
           <% @reviews.each do |review|%>
             <dd><%= review.rating %> </dd>
             <dd><%= review.description %> </dd>
-            <% if @current_user == review.user_id %>
+            <dd>
+            <% if @current_user.id == review.user_id %>
+
             <%= button_to 'Delete ', product_review_url(@product, review), method: :delete %>
+            </dd>
             <% end %>
             <dd>&nbsp;</dd>
             <dd>&nbsp;</dd>
@@ -37,13 +40,14 @@
             <% if current_user == nil %>
             <dd> Please sign up or log in to add review!</dd>
             <% else %>
+            <dd>
             <%= form_for :review, url: product_reviews_path(@product) do |f| %>
               <h2>New review</h2>
               <%= f.text_field :description %><br>
               <%= f.select :rating, [1,2,3,4,5] %>
               <%= f.submit("Create Review") %><br>
              <% end %>
-
+             </dd>
             <% end %>
         </dl>
       </div>
