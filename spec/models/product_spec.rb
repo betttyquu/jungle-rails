@@ -21,7 +21,7 @@ RSpec.describe Product, type: :model do
         quantity: 2,
         category: category
       )
-      expect(@product.errors.full_messages).to include ("Name can't be empty")
+      expect(@product.errors.full_messages).to include ("Name can't be blank")
     end
 
     it 'is not valid without price' do
@@ -31,7 +31,7 @@ RSpec.describe Product, type: :model do
         quantity: 2,
         category: category
       )
-      expect(@product.errors.full_messages).to include ("Price can't be empty")
+      expect(@product.errors.full_messages).to include ("Price can't be blank")
     end
 
     it 'is not valid without price' do
@@ -41,7 +41,7 @@ RSpec.describe Product, type: :model do
         quantity: nil,
         category: category
       )
-      expect(@product.errors.full_messages).to include ("Quantity can't be empty")
+      expect(@product.errors.full_messages).to include ("Quantity can't be blank")
     end
 
     it 'is not valid without price' do
@@ -51,7 +51,7 @@ RSpec.describe Product, type: :model do
         quantity: 2,
         category: nil
       )
-      expect(@product.errors.full_messages).to include ("Category can't be empty")
+      expect(@product.errors.full_messages).to include ("Category can't be blank")
     end
 
     
